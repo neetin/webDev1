@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript">
+		function valid(){
+			var usernameVal = document.getElementById('username').value;
+			var passwordVal = document.getElementById('password').value;
+
+			if(usernameVal === 'webmaster' && passwordVal === 'changeme@soon'){
+				alert('Hurray!! Simple but 1 step forward');
+			}
+			else{
+				alert('Invalid username/password combination. Please try with valid credentials');
+				return false;
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<!-- my name: neetin -->
+		<a href="home.htm">Home</a><br/><a href="login.htm">Login</a><br/><a href="signup.htm">Signup</a>
+		<form method="post" action="" onSubmit="return valid();">
+			<label>Username</label><input type="text" id="username" ><br/>
+			<label>Password</label><input type="password" id="password" /><br/>
+			<input type="submit" value="Login" />
+		</form>
+	</body>
+</html>
