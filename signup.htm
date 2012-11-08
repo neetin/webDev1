@@ -12,6 +12,19 @@
 				alert('empty fields can not be submitted');
 				return false;
 			}
+
+			var reg = new RegExp("^[0-9a-zA-Z]+@[0-9a-zA-Z]+[\.]{1}[0-9a-zA-Z]+[\.]?[0-9a-zA-Z]+$");   
+			if(!reg.test(emailVal)){
+				alert('Invalid Email address');
+				return false;
+			}
+
+			var reg_username = new RegExp("^[0-9][a-zA-Z]{5}[0-9a-zA-Z]*$");   
+			if(!reg_username.test(usernameVal)){
+				alert('Invalid username, first character should be digit, and min length should be 6.');
+				return false;
+			}
+				
 		}
 		</script>
 	</head>
